@@ -8,6 +8,9 @@ def send_motor_message(motor_serial_port, motor_message_id, left_direction, righ
     motor_message = f"{motor_message_id},{left_direction},{right_direction},{left_speed},{right_speed}\n"
     motor_serial_port.write(message.encode())
 
+def receive_ultrasonic_data(): 
+    print("hi")
+
 
 # Serial port configuration
 state_serial_port = serial.Serial('/dev/ttyUSB0', 9600)  # Replace '/dev/ttyUSB0' with the appropriate serial port
